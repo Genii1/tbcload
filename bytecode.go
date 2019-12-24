@@ -647,6 +647,13 @@ var tclOpTable = []InstructionDesc{
 	/* Read clock out to the stack. Operand is which clock to read
 	 * 0=clicks, 1=microseconds, 2=milliseconds, 3=seconds.
 	 * Stack: ... => ... time */
+	
+	{"dictGetDef", 5, INT_MIN, 1, [2]byte{OPERAND_UINT4}},
+	{"strlt", 1, -1, 0, [2]byte{OPERAND_NONE}},
+	{"strgt", 1, -1, 0, [2]byte{OPERAND_NONE}},
+	{"strle", 1, -1, 0, [2]byte{OPERAND_NONE}},
+	{"strge", 1, -1, 0, [2]byte{OPERAND_NONE}},
+	
 
 	{"", 0, 0, 0, [2]byte{OPERAND_NONE}},
 }
